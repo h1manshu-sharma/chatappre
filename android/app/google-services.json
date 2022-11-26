@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "10600880622",
+    "project_id": "chatapp-1c167",
+    "storage_bucket": "chatapp-1c167.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:10600880622:android:bffb37d2d359d89c59d6ff",
+        "android_client_info": {
+          "package_name": "com.himanshu.chatapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "10600880622-kn6sc0rctlj1fn5gutsaqc7cmabhtl10.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAeIhjDOMWaTqy6_Q2hMHKtdn8iJ3MokSQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "10600880622-kn6sc0rctlj1fn5gutsaqc7cmabhtl10.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
