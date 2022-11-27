@@ -27,7 +27,7 @@ class _PrimaryButtonState extends State<PrimaryButton> {
         onPressed: (widget.isLoading == false) ? widget.onPressed : null,
         color: Colors.black,
         child: Stack(children: [
-          widget.iconData != null
+          (widget.iconData != null)
               ? Align(
                   alignment: Alignment.centerLeft,
                   child: Icon(widget.iconData),
