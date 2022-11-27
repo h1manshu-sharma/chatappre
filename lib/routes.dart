@@ -1,3 +1,4 @@
+import 'package:chatapp/presentation/screens/onboarding/providers/signinwithemailprovider.dart';
 import 'package:chatapp/presentation/screens/onboarding/providers/signupwithemailprovider.dart';
 import 'package:chatapp/presentation/screens/onboarding/signinwithemail.dart';
 import 'package:chatapp/presentation/screens/onboarding/signupwithemail.dart';
@@ -17,7 +18,9 @@ class Routes {
 
       case signinwithemail:
         return CupertinoPageRoute(
-            builder: (context) => SignInWithEmailScreen());
+            builder: (context) => ChangeNotifierProvider(
+                create: (context) => SignInWithEmailProvider(),
+                child: SignInWithEmailScreen()));
 
       case signupwithemail:
         return CupertinoPageRoute(

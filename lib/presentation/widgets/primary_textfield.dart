@@ -6,6 +6,8 @@ class PrimaryTextField extends StatefulWidget {
   final TextEditingController? controller;
   final Function(String)? onChanged;
   final bool obscureText;
+  final String? Function(String?)? validator;
+  final bool? enabled;
 
   const PrimaryTextField({
     super.key,
@@ -13,6 +15,8 @@ class PrimaryTextField extends StatefulWidget {
     this.controller,
     this.onChanged,
     this.obscureText = false,
+    this.validator,
+    this.enabled,
   });
 
   @override
@@ -32,6 +36,8 @@ class _PrimaryTextFieldState extends State<PrimaryTextField> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      enabled: widget.enabled,
+      validator: widget.validator,
       controller: widget.controller,
       onChanged: widget.onChanged,
       obscureText: hideText,
