@@ -8,16 +8,19 @@ class PrimaryTextField extends StatefulWidget {
   final bool obscureText;
   final String? Function(String?)? validator;
   final bool? enabled;
+  final Widget? prefix;
+  final int? maxLength;
 
-  const PrimaryTextField({
-    super.key,
-    required this.label,
-    this.controller,
-    this.onChanged,
-    this.obscureText = false,
-    this.validator,
-    this.enabled,
-  });
+  const PrimaryTextField(
+      {super.key,
+      required this.label,
+      this.controller,
+      this.onChanged,
+      this.obscureText = false,
+      this.validator,
+      this.enabled,
+      this.prefix,
+      this.maxLength});
 
   @override
   State<PrimaryTextField> createState() => _PrimaryTextFieldState();
@@ -36,12 +39,15 @@ class _PrimaryTextFieldState extends State<PrimaryTextField> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      maxLength: widget.maxLength,
       enabled: widget.enabled,
       validator: widget.validator,
       controller: widget.controller,
       onChanged: widget.onChanged,
       obscureText: hideText,
       decoration: InputDecoration(
+        counterText: "",
+        prefixIcon: widget.prefix,
         labelText: widget.label,
         border: OutlineInputBorder(),
         suffix: widget.obscureText == true

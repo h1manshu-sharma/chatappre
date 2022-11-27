@@ -18,4 +18,12 @@ class Validators {
       return null;
     }
   }
+
+  static String? phoneValidator(String? value) {
+    if (value == null || value.trim().isEmpty) {
+      return "Please Enter a valid phone number";
+    } else {
+      return null;
+    }
+  }
 }

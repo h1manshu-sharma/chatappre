@@ -50,7 +50,9 @@ class WelcomeScreen extends StatelessWidget {
                 GapWidget(),
                 PrimaryButton(
                     text: "Continue With Phone",
-                    onPressed: () {},
+                    onPressed: () {
+                      goTo(Routes.signinwithphone);
+                    },
                     iconData: FontAwesomeIcons.phone),
                 GapWidget(),
                 PrimaryButton(
