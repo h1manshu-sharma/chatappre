@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:chatapp/app.dart';
 import 'package:chatapp/logic/services/auth_services.dart';
 import 'package:chatapp/presentation/widgets/primary_button.dart';
@@ -68,7 +70,10 @@ class _OtpDialogState extends State<OtpDialog> {
               PrimaryButton(
                 isLoading: isLoading,
                 text: "Verify OTP",
-                onPressed: verifyOtp,
+                onPressed: () {
+                  log("button pressed");
+                  verifyOtp();
+                },
               ),
             ],
           ),

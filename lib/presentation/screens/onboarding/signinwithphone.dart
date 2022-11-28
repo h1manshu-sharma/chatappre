@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:chatapp/presentation/helpers/validators.dart';
 import 'package:chatapp/presentation/screens/onboarding/providers/signinwithphoneprovider.dart';
 import 'package:chatapp/presentation/widgets/gap_widget.dart';
@@ -45,7 +47,10 @@ class _SignInWithPhoneState extends State<SignInWithPhone> {
             PrimaryButton(
                 isLoading: controller.isLoading,
                 text: "SignIn",
-                onPressed: controller.sendOTP)
+                onPressed: () {
+                  log("otp sent");
+                  controller.sendOTP();
+                })
           ],
         ),
       )),
