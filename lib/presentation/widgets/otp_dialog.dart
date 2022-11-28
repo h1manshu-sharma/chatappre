@@ -4,6 +4,7 @@ import 'package:chatapp/app.dart';
 import 'package:chatapp/logic/services/auth_services.dart';
 import 'package:chatapp/presentation/widgets/primary_button.dart';
 import 'package:chatapp/presentation/widgets/primary_textfield.dart';
+import 'package:chatapp/routes.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -38,8 +39,8 @@ class _OtpDialogState extends State<OtpDialog> {
           await AuthServices.verifyOTP(otp, widget.verificationId);
 
       if (userCredential.user != null) {
+        closeAllAndGoTo(Routes.completeprofile1);
         showSnackbar("Signed in");
-        goBack();
       }
     } on FirebaseAuthException catch (e) {
       showSnackbar(e.message.toString());

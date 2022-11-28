@@ -21,7 +21,7 @@ class ChatApp extends StatelessWidget {
       theme: Themes.lightTheme,
       debugShowCheckedModeBanner: false,
       onGenerateRoute: Routes.onGenerateRoute,
-      initialRoute: Routes.welcome,
+      initialRoute: Routes.redirectScreen,
     );
   }
 }

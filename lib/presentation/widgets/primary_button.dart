@@ -6,12 +6,15 @@ class PrimaryButton extends StatefulWidget {
   final Function() onPressed;
   final bool isLoading;
   final IconData? iconData;
+  final bool? enabled;
+
   const PrimaryButton({
     super.key,
     required this.text,
     required this.onPressed,
     this.isLoading = false,
     this.iconData,
+    this.enabled,
   });
 
   @override

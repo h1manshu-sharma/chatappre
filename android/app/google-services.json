@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "10600880622-v5o18jd7bltm9u8d7jscukdn2bf4pdpl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.himanshu.chatapp",
+            "certificate_hash": "e9eaa2d7e7f53d76e938a072e83954c85200416e"
+          }
+        },
+        {
           "client_id": "10600880622-kn6sc0rctlj1fn5gutsaqc7cmabhtl10.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,6 +37,13 @@
             {
               "client_id": "10600880622-kn6sc0rctlj1fn5gutsaqc7cmabhtl10.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "10600880622-2tul85lr8b56feohd70vi62p193vm448.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.himanhsu.chatapp"
+              }
             }
           ]
         }

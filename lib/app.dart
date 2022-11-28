@@ -10,6 +10,15 @@ void goBack() {
   Navigator.pop(navigatorKey.currentState!.context);
 }
 
+void goToReplacement(String routeName) {
+  Navigator.pushReplacementNamed(navigatorKey.currentState!.context, routeName);
+}
+
+void closeAllAndGoTo(String routeName) {
+  Navigator.popUntil(navigatorKey.currentContext!, (route) => route.isFirst);
+  Navigator.pushReplacementNamed(navigatorKey.currentContext!, routeName);
+}
+
 void showSnackbar(String content,
     {Color backgroundColor = Colors.red,
     Duration duration = const Duration(seconds: 3)}) {

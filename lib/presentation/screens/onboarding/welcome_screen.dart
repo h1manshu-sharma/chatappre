@@ -1,4 +1,5 @@
 import 'package:chatapp/app.dart';
+import 'package:chatapp/presentation/screens/onboarding/providers/welcome_provider.dart';
 import 'package:chatapp/presentation/widgets/gap_widget.dart';
 import 'package:chatapp/presentation/widgets/primary_button.dart';
 import 'package:chatapp/presentation/widgets/primary_textfield.dart';
@@ -6,6 +7,7 @@ import 'package:chatapp/routes.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:provider/provider.dart';
 
 import '../../constants/constants.dart';
 
@@ -14,6 +16,7 @@ class WelcomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Provider.of<WelcomeProvider>(context);
     return Scaffold(
       body: SafeArea(
           child: Padding(
@@ -49,6 +52,7 @@ class WelcomeScreen extends StatelessWidget {
                 ),
                 GapWidget(),
                 PrimaryButton(
+                    isLoading: controller.isLoading,
                     text: "Continue With Phone",
                     onPressed: () {
                       goTo(Routes.signinwithphone);
@@ -56,9 +60,19 @@ class WelcomeScreen extends StatelessWidget {
                     iconData: FontAwesomeIcons.phone),
                 GapWidget(),
                 PrimaryButton(
-                  text: "Continue With Google",
+                  text: "Continue With Email",
+                  isLoading: controller.isLoading,
                   onPressed: () {
                     goTo(Routes.signinwithemail);
+                  },
+                  iconData: FontAwesomeIcons.google,
+                ),
+                GapWidget(),
+                PrimaryButton(
+                  text: "Continue With Google",
+                  isLoading: controller.isLoading,
+                  onPressed: () async {
+                    controller.signInWithGoogle();
                   },
                   iconData: FontAwesomeIcons.google,
                 ),
