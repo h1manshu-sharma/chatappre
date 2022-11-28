@@ -1,11 +1,8 @@
-import 'dart:developer';
-
 import 'package:chatapp/presentation/helpers/validators.dart';
 import 'package:chatapp/presentation/screens/onboarding/providers/signinwithphoneprovider.dart';
 import 'package:chatapp/presentation/widgets/gap_widget.dart';
 import 'package:chatapp/presentation/widgets/primary_button.dart';
 import 'package:chatapp/presentation/widgets/primary_textfield.dart';
-import 'package:country_picker/country_picker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
