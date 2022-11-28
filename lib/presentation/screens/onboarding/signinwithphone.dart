@@ -48,7 +48,6 @@ class _SignInWithPhoneState extends State<SignInWithPhone> {
                 isLoading: controller.isLoading,
                 text: "SignIn",
                 onPressed: () {
-                  log("otp sent");
                   controller.sendOTP();
                 })
           ],

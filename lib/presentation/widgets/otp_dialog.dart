@@ -24,7 +24,7 @@ class _OtpDialogState extends State<OtpDialog> {
   bool isLoading = false;
 
   void verifyOtp() async {
-    if (formKey.currentState!.validate()) {
+    if (!formKey.currentState!.validate()) {
       return;
     }
     setState(() {
@@ -71,7 +71,6 @@ class _OtpDialogState extends State<OtpDialog> {
                 isLoading: isLoading,
                 text: "Verify OTP",
                 onPressed: () {
-                  log("button pressed");
                   verifyOtp();
                 },
               ),
