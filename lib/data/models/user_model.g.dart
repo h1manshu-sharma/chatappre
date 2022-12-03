@@ -18,7 +18,8 @@ UserModel _$UserModelFromJson(Map<String, dynamic> json) => UserModel()
       : DateTime.parse(json['createdOn'] as String)
   ..updatedOn = json['updatedOn'] == null
       ? null
-      : DateTime.parse(json['updatedOn'] as String);
+      : DateTime.parse(json['updatedOn'] as String)
+  ..profileProgress = json['profileProgress'] as int?;
 
 Map<String, dynamic> _$UserModelToJson(UserModel instance) => <String, dynamic>{
       'id': instance.id,
@@ -29,4 +30,5 @@ Map<String, dynamic> _$UserModelToJson(UserModel instance) => <String, dynamic>{
       'bio': instance.bio,
       'createdOn': instance.createdOn?.toIso8601String(),
       'updatedOn': instance.updatedOn?.toIso8601String(),
+      'profileProgress': instance.profileProgress,
     };

@@ -1,5 +1,6 @@
 import 'package:chatapp/presentation/screens/account%20creation/complete_profile_screen.dart';
 import 'package:chatapp/presentation/screens/account%20creation/providers/complete_profile_provider.dart';
+import 'package:chatapp/presentation/screens/home/home_screen.dart';
 import 'package:chatapp/presentation/screens/onboarding/providers/signinwithemailprovider.dart';
 import 'package:chatapp/presentation/screens/onboarding/providers/signupwithemailprovider.dart';
 import 'package:chatapp/presentation/screens/onboarding/providers/welcome_provider.dart';
@@ -20,6 +21,7 @@ class Routes {
   static const String signinwithphone = "signupwithphone";
   static const String completeprofile1 = "completeprofile1";
   static const String redirectScreen = "redirectScreen";
+  static const String home = "home";
 
   static Route<dynamic>? onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -55,6 +57,8 @@ class Routes {
                 ));
       case redirectScreen:
         return CupertinoPageRoute(builder: (context) => RedirectScreen());
+      case home:
+        return CupertinoPageRoute(builder: (context) => HomeScreen());
 
       default:
         return null;

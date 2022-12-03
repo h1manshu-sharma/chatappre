@@ -37,6 +37,18 @@ class UserCubit extends Cubit<UserState> {
         FirebaseAuth.instance.userChanges().listen(handleAuthState);
   }
 
+  UserModel? getCurrentUser() {
+    if (state is UserLoggedInState) {
+      return (state as UserLoggedInState).userModel;
+    }
+    return null;
+  }
+
+  void updateUser(UserModel userModel) async {
+    emit(UserLoggedInState(userModel));
+    userRepository.saveUser(userModel);
+  }
+
   @override
   Future<void> close() {
     _authSubscription?.cancel();

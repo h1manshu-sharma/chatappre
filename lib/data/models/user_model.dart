@@ -11,9 +11,10 @@ class UserModel {
   String? email;
   String? profilePic;
   String? bio;
-
   DateTime? createdOn;
   DateTime? updatedOn;
+
+  int? profileProgress;
 
   UserModel();
 
@@ -22,6 +23,7 @@ class UserModel {
     newUserModel.id = user.uid;
     newUserModel.email = user.email;
     newUserModel.phoneNumber = user.phoneNumber;
+    newUserModel.profileProgress = 0;
     return newUserModel;
   }
 
